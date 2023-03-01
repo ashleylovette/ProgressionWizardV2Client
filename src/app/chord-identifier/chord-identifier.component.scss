@@ -20,6 +20,23 @@
    width: 13em;
    background-color: white;
    color: gray;
+   align-items: center;
+   justify-content: space-around;
+   display: flex;
+
+   .chord-text {
+    text-align: center;
+
+     &.chord-name {
+       font-size: xx-large;
+       font-weight: 500;
+     }
+
+     &.chord-placeholder {
+       font-size: x-large;
+       font-weight: 400;
+     }
+   }
  }
 
  .dialog-buttons {

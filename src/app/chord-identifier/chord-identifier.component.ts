@@ -13,15 +13,15 @@ import { ChordRef } from 'src/app/shared/models/chord-ref.model';
 
   <div class="chord-detection">
     <mat-card class="chord">
-      <h2>
+      <div class="chord-text" [ngClass]="chordRef ? 'chord-name' : 'chord-placeholder'">
         {{ this.chordRef ? this.chordRef.name : "Your Chord Goes Here" }}
-      </h2>
+      </div>
     </mat-card>
     <div class="dialog-buttons">
-      <button type="submit" class="btn primary" (click)="onSaveChord()">
+      <button type="submit" class="btn primary" (click)="onSend(true)">
         Save Chord
       </button>
-      <button type="button" class="btn secondary">Clear Chord</button>
+      <button type="button" class="btn secondary" (click)="onSend(false)">Clear Chord</button>
     </div>
   </div>
 
@@ -48,12 +48,10 @@ export class ChordIdentifierComponent implements OnInit {
 
   setChordRef(ref: ChordRef) {
     this.chordRef = ref;
-   console.log(this.chordRef);
   }
 
-  onSaveChord() {
-    console.log(this.chordRef);
-    this.saveChord.next(this.chordRef)
+  onSend(saved: boolean) {
+    if(saved) {this.saveChord.next(this.chordRef);}
+    this.chordRef = null;
   }
-
 }

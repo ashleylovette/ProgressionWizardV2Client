@@ -1,6 +1,6 @@
 import { ChordRef } from "./chord-ref.model";
 
-export class CustomSongDataWrapper {
+export class CustomSong {
   chords: ChordRef[] = [];
   songName: string;
 

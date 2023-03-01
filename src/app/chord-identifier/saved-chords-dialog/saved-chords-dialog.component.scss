@@ -1,7 +1,6 @@
 @import "../../../global-styles.scss";
 
 .saved-chords-dialog {
-  height: 85vh;
   width: 100% !important;
 
   .dialog-header-container {
@@ -35,8 +34,6 @@
 }
 
 
-
-
   .chord-list {
     margin-top: 2em;
     height: 45vh !important;
@@ -54,7 +51,7 @@
       align-items: center;
 
       .chord-name {
-        font-size: x-large;
+        font-size: xx-large;
       }
     }
   }
