@@ -1,14 +1,30 @@
-<div class="container-fluid">
-  <div class="chord-identifier-container">
-    <h2 class="chord-identifier-title">Chord Identifier</h2>
-    <mat-divider></mat-divider>
+<div class="chord-identifier">
+  <div>
+    <h2 class="title-text">Chord Identifier</h2>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="chord-detection">
     <mat-card class="chord">
-      <h2>Your Chord Goes Here</h2>
+      <h2>
+        {{ this.chordRef ? this.chordRef.name : "Your Chord Goes Here" }}
+      </h2>
     </mat-card>
+    <div class="dialog-buttons">
+      <button type="submit" class="btn primary" (click)="onSaveChord()">
+        Save Chord
+      </button>
+      <button type="button" class="btn secondary">Clear Chord</button>
+    </div>
   </div>
 
-  <div class="container-fluid">
-    <app-chord-input-dialog></app-chord-input-dialog>
-  </div>
+  <app-chord-input-dialog
+    (chordFound)="setChordRef($event)"
+  ></app-chord-input-dialog>
+
+  <app-saved-chords-dialog
+    class="saved-chords-dialog"
+    [savedChord]="saveChord"
+  ></app-saved-chords-dialog>
 </div>
-

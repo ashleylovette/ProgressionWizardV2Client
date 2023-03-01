@@ -14,8 +14,9 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ChordInputDialogComponent } from './chord-identifier/chord-input-dialog/chord-input-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 import {MatDividerModule} from '@angular/material/divider';
+import { SavedChordsDialogComponent } from './chord-identifier/saved-chords-dialog/saved-chords-dialog.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {MatDividerModule} from '@angular/material/divider';
     HomePageComponent,
     ChordIdentifierComponent,
     HeaderComponent,
-    ChordInputDialogComponent
+    ChordInputDialogComponent,
+    SavedChordsDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,7 @@ import {MatDividerModule} from '@angular/material/divider';
     MatSnackBarModule,
     MatDividerModule
   ],
-  providers: [],
+  providers: [{provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 5000}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Chord } from 'tonal';
@@ -15,11 +15,12 @@ export class ChordInputDialogComponent implements OnInit {
     notes: new FormArray([])
   });
 
+  @Output() chordFound = new EventEmitter<ChordRef>(null);
+
   constructor(private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
    this.initializeNoteForm();
-
   }
 
   onAddNote() {
@@ -46,8 +47,6 @@ export class ChordInputDialogComponent implements OnInit {
   }
 
   onSubmit(noteForm: FormGroup) {
-    console.log(noteForm.value);
-
     let chord = Chord.detect(noteForm.value.notes);
 
     if(chord.length === 0){
@@ -59,8 +58,7 @@ export class ChordInputDialogComponent implements OnInit {
     } else {
       let truthyChord = new ChordRef(chord[0], noteForm.value.notes);
       this._snackBar.open("Chord Found!");
-      console.log(truthyChord);
-
+      this.chordFound.emit(truthyChord);
     }
   }
 

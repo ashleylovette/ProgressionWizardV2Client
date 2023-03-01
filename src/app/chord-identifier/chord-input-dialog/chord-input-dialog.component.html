@@ -11,7 +11,7 @@
           formArrayName="notes"
           appearance="fill"
         >
-          <input matInput [formControlName]="i" id="notes" />
+          <input type="text" matInput [formControlName]="i" id="notes" />
         </mat-form-field>
       </div>
       <div class="row">
@@ -27,7 +27,7 @@
             type="submit"
             [disabled]="!noteForm.valid"
           >
-            Submit Chord
+            Submit Notes
           </button>
           <button class="btn secondary" type="button" (click)="onResetForm()">
             Reset

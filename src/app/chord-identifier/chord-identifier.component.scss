@@ -1,19 +1,41 @@
-.chord-identifier-container {
+@import "../../global-styles.scss";
+
+
+.chord-identifier {
  margin: 2em;
 
- .chord-identifier-title {
+ .title-text {
  font-size: xx-large;
  font-weight: lighter;
  }
 
+ .chord-detection {
+  display: grid;
+  width: 50vw;
+  grid-template-columns: repeat(2, auto);
+
  .chord {
-  margin-top: 3em;
+  margin: 3em 3em 0 3em;
    height: 13em;
    width: 13em;
    background-color: white;
    color: gray;
  }
+
+ .dialog-buttons {
+  align-items: center;
+  max-width: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  button {
+    height: 3em;
+  }
+ }
+}
 }
 
-
+.saved-chords-dialog {
+  margin: 10em;
+  }
 
