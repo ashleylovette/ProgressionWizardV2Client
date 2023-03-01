@@ -6,7 +6,47 @@ import { ChordRef } from 'src/app/shared/models/chord-ref.model';
 
 @Component({
   selector: 'app-chord-input-dialog',
-  templateUrl: './chord-input-dialog.component.html',
+  template: `
+  <div class="input-card">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-subtitle> Enter at least three notes below: </mat-card-subtitle>
+    </mat-card-header>
+    <form [formGroup]="noteForm" (ngSubmit)="onSubmit(noteForm)">
+      <div class="input-group">
+        <mat-form-field
+          *ngFor="let note of getControls(); let i = index"
+          class="note-form-field"
+          formArrayName="notes"
+          appearance="fill"
+        >
+          <input type="text" matInput [formControlName]="i" id="notes" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <div class="column btn-group">
+          <button class="btn primary" type="button" (click)="onAddNote()">
+            Add Note
+          </button>
+          <button class="btn secondary" type="button" (click)="onRemoveNote()">
+            Remove Note
+          </button>
+          <button
+            class="btn primary"
+            type="submit"
+            [disabled]="!noteForm.valid"
+          >
+            Submit Notes
+          </button>
+          <button class="btn secondary" type="button" (click)="onResetForm()">
+            Reset
+          </button>
+        </div>
+      </div>
+    </form>
+  </mat-card>
+</div>
+`,
   styleUrls: ['./chord-input-dialog.component.scss']
 })
 
