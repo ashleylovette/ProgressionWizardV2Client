@@ -1,0 +1,70 @@
+  .profile-card {
+
+    img {
+      border-radius: 50%;
+      border: 5px solid gray;
+      width: 90%;
+      height: 100%;
+      margin: 1.25em !important;
+    }
+
+    .profile-card-body {
+      margin: 2em;
+      padding-top: 1em;
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+
+    .username {
+      font-size: x-large;
+      margin: .25em 0;
+      color: purple;
+    }
+
+    .user-handle {
+      font-size: small;
+      color: gray;
+    }
+
+    .songs-likes {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      margin: 1.25em 0;
+
+      span {
+        font-size: x-large;
+        font-weight: 700;
+        color: purple
+      }
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      margin: 1em 0 1.5em 0;
+
+      .user-info-body {
+        font-size: medium;
+        font-weight: 500;
+        margin: 0.5em 0;
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+          span {
+            font-weight: 300;
+          }
+      }
+    }
+    }
+
+    .follow {
+      margin: .5em 0;
+      width: 100%;
+      // border: 2px solid purple;
+      background-color: purple;
+      opacity: 80%;
+      color: white;
+      border-radius: 15px;
+    }
+  }
+
+

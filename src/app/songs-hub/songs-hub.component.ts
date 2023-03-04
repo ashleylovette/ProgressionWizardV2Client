@@ -26,10 +26,14 @@ import { Component, OnInit } from '@angular/core';
             </button>
             <button mat-icon-button>
               <mat-icon>arrow_upward</mat-icon>
-              <div>By Date</div>
+              <div>Date</div>
             </button>
           </div>
         </mat-card>
+        <div class="user-songs-display">
+          <app-songs-list></app-songs-list>
+          <app-profile-card></app-profile-card>
+        </div>
       </div>
   `,
   styleUrls: ['./songs-hub.component.scss']

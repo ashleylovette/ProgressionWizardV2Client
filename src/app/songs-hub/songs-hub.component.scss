@@ -32,3 +32,10 @@
     }
   }
 }
+
+.user-songs-display {
+  margin-top: 4em;
+  display: grid;
+  grid-template-columns: 65% 30%;
+  gap: 5%;
+}
