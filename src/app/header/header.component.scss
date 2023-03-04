@@ -2,8 +2,40 @@ mat-toolbar {
   background-color: black;
   color: white;
   font-weight: 100;
+  position: sticky;
+  top: 0;
+  height: auto;
+  z-index: 999;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1em 2em;
+
+  .middle-align {
+    justify-self: center;
+
+    button {
+      padding: 0 3em;
+      &:hover {
+        color: purple;
+      }
+
+      mat-icon {
+        font-size: 1.75em;
+      }
+    }
+
+  }
+
+  .right-align {
+    justify-self: right;
+    padding-right: 1em;
+
+    .account-button {
+      border: 1px solid white;
+      border-radius: 15%;
+    }
+  }
 }
 
-.example-spacer{
-   flex: 1 1 auto;
-}
+

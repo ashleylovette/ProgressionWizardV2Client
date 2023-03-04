@@ -17,6 +17,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 import {MatDividerModule} from '@angular/material/divider';
 import { SavedChordsDialogComponent } from './chord-identifier/saved-chords-dialog/saved-chords-dialog.component';
+import {MatButtonModule } from '@angular/material/button';
+import { SongsHubComponent } from './songs-hub/songs-hub.component';
+import { SongsListComponent } from './songs-hub/songs-list/songs-list.component';
+import { ProfileCardComponent } from './songs-hub/profile-card/profile-card.component';
 
 
 @NgModule({
@@ -26,13 +30,17 @@ import { SavedChordsDialogComponent } from './chord-identifier/saved-chords-dial
     ChordIdentifierComponent,
     HeaderComponent,
     ChordInputDialogComponent,
-    SavedChordsDialogComponent
+    SavedChordsDialogComponent,
+    SongsHubComponent,
+    SongsListComponent,
+    ProfileCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
     MatToolbarModule,
+    MatButtonModule,
     MatIconModule,
     MatCardModule,
     MatInputModule,

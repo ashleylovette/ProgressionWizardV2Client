@@ -1,0 +1,34 @@
+.sort-container {
+  margin-top: 2em;
+  padding-right: 3em;
+  width: 100% !important;
+  display: flex;
+  justify-content: space-between;
+
+  .top-hot-new {
+    justify-content: center;
+
+    button {
+      margin: 1em 1.5em;
+      color: gray;
+
+      div {
+        display: inline;
+        padding-left: 0.5em;
+      }
+    }
+  }
+
+  .alphabetical-date {
+
+    button {
+      color: gray;
+      margin: 1em 2em;
+
+      div {
+        display: inline;
+        margin-left: 0.35em;
+      }
+    }
+  }
+}
