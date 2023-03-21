@@ -1,0 +1,29 @@
+@import "src/global-styles";
+
+.sign-in-card {
+  padding: 3em;
+  width: 40vw;
+  border-radius: 5%;
+
+  input {
+    height: 3.5em;
+    margin: 1em 0 1em 0;
+  }
+
+  .existing-account {
+    align-items: center;
+
+    button {
+      width: 100%;
+    }
+
+    div {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .create-account {
+    width: 100%;
+  }
+}

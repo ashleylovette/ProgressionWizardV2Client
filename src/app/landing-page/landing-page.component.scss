@@ -2,10 +2,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh !important;
+  background-color: whitesmoke;
 
   .text-box {
     align-self: center;
     justify-self: center;
+
+    .landing-page-icon {
+      font-size: 5em;
+      width: 80%;
+      text-align: center;
+      color: purple;
+    }
 
     .title-text {
       font-size: 3em;
@@ -17,11 +25,17 @@
     .subtitle-text {
       font-size: 1.5em;
       font-weight: 500;
+      color: dimgrey;
 
       span {
         display: flex;
         padding: .25em 0 .25em 0;
       }
     }
+  }
+
+  .sign-on {
+    align-self: center;
+    justify-self: center;
   }
 }
