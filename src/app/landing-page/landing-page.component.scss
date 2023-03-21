@@ -1,0 +1,27 @@
+.landing-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh !important;
+
+  .text-box {
+    align-self: center;
+    justify-self: center;
+
+    .title-text {
+      font-size: 3em;
+      font-weight: 900;
+      padding: 1em 0 1em 0;
+      color: purple;
+    }
+
+    .subtitle-text {
+      font-size: 1.5em;
+      font-weight: 500;
+
+      span {
+        display: flex;
+        padding: .25em 0 .25em 0;
+      }
+    }
+  }
+}

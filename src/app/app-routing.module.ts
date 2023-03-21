@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChordIdentifierComponent } from './chord-identifier/chord-identifier.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { SongsHubComponent } from './songs-hub/songs-hub.component';
+import { ChordIdentifierComponent } from './home/chord-identifier/chord-identifier.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { SongsHubComponent } from './home/songs-hub/songs-hub.component';
+import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: 'home', component: HomePageComponent},
-  { path: 'chord-identifier', component: ChordIdentifierComponent},
-  { path: 'songs-hub', component: SongsHubComponent}
+  { path: '', redirectTo: '/landing-page', pathMatch: 'full'},
+  { path: 'landing-page', component: LandingPageComponent},
+  {path: 'home', component: HomeComponent, children: [
+      { path: 'chord-identifier', component: ChordIdentifierComponent},
+      { path: 'songs-hub', component: SongsHubComponent}
+    ]}
 ];
 
 @NgModule({
