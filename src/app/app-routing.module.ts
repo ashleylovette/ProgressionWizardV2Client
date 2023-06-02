@@ -13,7 +13,6 @@ const routes: Routes = [
       { path: 'songs-hub', component: SongsHubComponent}
     ]}
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

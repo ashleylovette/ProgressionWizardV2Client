@@ -1,6 +1,6 @@
 export class ChordRef {
   name: string;
-  notes: [];
+  notes: string[];
 
   constructor(name: string, notes: []) {
     this.name = name;

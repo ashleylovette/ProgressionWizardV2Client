@@ -44,7 +44,7 @@ import { CustomSong } from 'src/app/shared/models/custom-song';
 })
 export class SavedChordsDialogComponent implements OnInit {
   @Input() savedChord = new BehaviorSubject<ChordRef>(null);
-  customSongData = new CustomSong;
+  customSongData: CustomSong;
 
   constructor() {}
 

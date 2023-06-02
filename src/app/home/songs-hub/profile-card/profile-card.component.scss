@@ -1,13 +1,16 @@
   .profile-card {
 
-    img {
-      border-radius: 50%;
-      border: 5px solid gray;
-      width: 90%;
-      height: 100%;
-      margin: 1.25em !important;
-    }
+    .image-container {
+      display: flex;
+      justify-content: center;
 
+      img {
+        border-radius: 50%;
+        border: 2px solid white;
+        width: 70%;
+        margin: 1.25em !important;
+      }
+    }
     .profile-card-body {
       margin: 2em;
       padding-top: 1em;
