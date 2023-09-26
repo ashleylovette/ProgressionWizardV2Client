@@ -35,7 +35,7 @@ import { CustomSong } from 'src/app/shared/models/custom-song';
 
     <div class="dialog-buttons">
       <button type="submit" class="btn primary">Save Song</button>
-      <button type="button" class="btn secondary">Clear Song</button>
+      <button type="button" class="btn secondary" (click)="clearSong()">Clear Song</button>
     </div>
   </form>
 </mat-card>
@@ -58,5 +58,13 @@ export class SavedChordsDialogComponent implements OnInit {
 
   customSongDialogValid(): boolean {
    return this.customSongData.chords.length > 0;
+  }
+
+  clearSong() {
+    this.customSongData.chords = [];
+  }
+
+  submitSong() {
+    const request
   }
 }

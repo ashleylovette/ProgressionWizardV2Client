@@ -1,1 +1,41 @@
+.first-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em;
+
+  .song-name {
+    font-size: large;
+  }
+
+  .username {
+    color: gray;
+    margin-right: 2em;
+  }
+}
+.second-row {
+  display: flex;
+  justify-content: space-evenly;
+
+  .details {
+    font-size: small;
+    font-weight: bold;
+    color: gray;
+  }
+
+  .detail-label {
+    font-weight: lighter;
+    font-style: italic;
+    margin-right: .5em;
+  }
+
+  .interactions {
+    display: flex;
+    justify-content: space-evenly;
+
+    mat-icon {
+      margin-left: 1em;
+      color: purple;
+    }
+  }
+}
 

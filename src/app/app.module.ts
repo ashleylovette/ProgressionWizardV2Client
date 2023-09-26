@@ -23,6 +23,7 @@ import { SongsListComponent } from './home/songs-hub/songs-list/songs-list.compo
 import { ProfileCardComponent } from './home/songs-hub/profile-card/profile-card.component';
 import { SignOnComponent } from './landing-page/sign-on/sign-on.component';
 import { HomeComponent } from './home/home.component';
+import { FeedComponent } from './home/feed/feed.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { HomeComponent } from './home/home.component';
     SongsListComponent,
     ProfileCardComponent,
     SignOnComponent,
-    HomeComponent
+    HomeComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule,

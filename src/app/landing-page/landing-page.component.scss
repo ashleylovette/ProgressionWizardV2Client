@@ -1,7 +1,15 @@
+@import "src/global-styles";
+
+.border-block {
+  background-color: $primary;
+  height: 15vh;
+}
+
 .landing-page {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100vh !important;
+  height: 70vh;
+  width: auto;
   background-color: whitesmoke;
 
   .text-box {
