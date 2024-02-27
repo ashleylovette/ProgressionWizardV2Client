@@ -3,6 +3,6 @@ export interface CurrentUser {
   lastName: string;
   email: string;
   birthday: Date;
-  instruments: [];
+  instruments: string[];
   countryOfResidence: string;
 }

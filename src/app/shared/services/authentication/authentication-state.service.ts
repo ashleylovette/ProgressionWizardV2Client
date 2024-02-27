@@ -9,6 +9,13 @@ export class AuthenticationStateService {
   public userState = new BehaviorSubject<SongwriterResponse>(null);
 
   constructor() {
-    this.currentUser = this.userState.value;
+    this.currentUser = {
+      firstName: this.userState.value?.firstName,
+      lastName: this.userState.value?.lastName,
+      email: this.userState.value?.email,
+      birthday: this.userState.value?.birthday,
+      instruments: this.userState.value?.instruments,
+      countryOfResidence: 'USA'
+    };
   }
 }

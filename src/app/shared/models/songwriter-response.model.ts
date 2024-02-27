@@ -5,7 +5,7 @@ export class SongwriterResponse {
   lastName: string;
   email: string;
   birthday: Date;
-  instruments: [];
+  instruments: string[];
   countryOfResidence: string;
   isAuthenticated: boolean;
   errors: [] = [];
@@ -16,7 +16,7 @@ export class SongwriterResponse {
     lastName: string,
     email: string,
     birthday: Date,
-    instruments: [],
+    instruments: string[],
     countryOfResidence: string,
     isAuthenticated: boolean,
     errors: []
