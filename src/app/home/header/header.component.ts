@@ -11,13 +11,13 @@ import { Component, OnInit } from '@angular/core';
     </div>
     <div class="middle-align">
       <button mat-icon-button>
+        <mat-icon [routerLink]="'songs-hub'">library_music</mat-icon>
+      </button>
+      <button mat-icon-button>
       <mat-icon [routerLink]="'home'">home</mat-icon>
       </button>
       <button mat-icon-button>
       <mat-icon [routerLink]="'chord-identifier'">music_note</mat-icon>
-      </button>
-      <button mat-icon-button>
-        <mat-icon [routerLink]="'songs-hub'">library_music</mat-icon>
       </button>
       </div>
     <div class="right-align">

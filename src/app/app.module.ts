@@ -23,10 +23,13 @@ import { SongsListComponent } from './home/songs-hub/songs-list/songs-list.compo
 import { ProfileCardComponent } from './home/songs-hub/profile-card/profile-card.component';
 import { SignOnComponent } from './landing-page/sign-on/sign-on.component';
 import { HomeComponent } from './home/home.component';
+import {AuthenticationService} from "./shared/services/authentication/authentication.service";
+import {HttpClientModule} from "@angular/common/http";
 import { FeedComponent } from './home/feed/feed.component';
 
 
 @NgModule({
+  bootstrap: [AppComponent],
   declarations: [
     AppComponent,
     LandingPageComponent,
@@ -54,9 +57,11 @@ import { FeedComponent } from './home/feed/feed.component';
     ReactiveFormsModule,
     FormsModule,
     MatSnackBarModule,
-    MatDividerModule
+    MatDividerModule,
+    HttpClientModule
   ],
-  providers: [{provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 5000}}],
-  bootstrap: [AppComponent]
+  providers: [
+    AuthenticationService,
+    {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 5000}}]
 })
 export class AppModule { }
